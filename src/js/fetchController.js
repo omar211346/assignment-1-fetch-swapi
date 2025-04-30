@@ -16,7 +16,11 @@ export async function fetchCategory(category, endpoint, fields = []) {
       return card;
     });
 
+<<<<<<< HEAD
     // du skal snart legge til: renderData(enriched, category);
+=======
+    renderData(enriched, category);
+>>>>>>> 7340fc9 ( fixed the fetchcontroller)
 
   } catch (error) {
     console.error(error);
