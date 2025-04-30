@@ -11,4 +11,16 @@ document.getElementById('btn-people').addEventListener('click', () => {
       'name', 'height', 'mass', 'hair_color', 'eye_color'
     ]);
   });
+  document.getElementById('btn-planets').addEventListener('click', () => {
+    fetchCategory('planets', 'https://swapi.py4e.com/api/planets/', [
+      'name', 'climate', 'terrain', 'population', 'diameter'
+    ]);
+  });
+
+  document.getElementById('btn-vehicles').addEventListener('click', () => {
+    fetchCategory('vehicles', 'https://swapi.py4e.com/api/vehicles/', [
+      'name', 'model', 'manufacturer', 'cost_in_credits', 'max_atmosphering_speed'
+    ]);
+  });
+  
   
