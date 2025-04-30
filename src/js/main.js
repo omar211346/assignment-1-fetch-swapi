@@ -22,5 +22,5 @@ document.getElementById('btn-people').addEventListener('click', () => {
       'name', 'model', 'manufacturer', 'cost_in_credits', 'max_atmosphering_speed'
     ]);
   });
-  
+
   
