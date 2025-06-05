@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "Lato";
+    src: url("/assets/fonts/Lato-Bold.ttf") format("truetype");
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: "Lato";
+    src: url("/assets/fonts/Lato-Black.ttf") format("truetype");
+    font-weight: 900;
+  }
+  
+  @font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/Roboto-Bold.ttf") format("truetype");
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/Roboto-Black.ttf") format("truetype");
+    font-weight: 900;
+  }
+
+  body {
+    font-family: var(--font-main);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 2rem;
+  }
+  
+  #app {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin-top: 2rem;
+  }
+  
+  /* CARD COMPONENT */
+  .card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .card-image {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    object-fit: cover;
+  }
+  
+  .card p {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  img, picture, video, canvas, svg {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  /* BUTTONS */
+  button {
+    padding: 0.8rem 1.4rem;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: black;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    transition: var(--transition);
+    margin-right: 1rem;
+    border: none;
+    display: inline-block;
+  }
+  
+  
+  button:hover {
+    background-color: var(--secondary-color);
+    color: #000;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    body {
+      padding: 1rem;
+    }
+  
+    .card {
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card h3 {
+      font-size: 1.1rem;
+    }
+  
+    .card p {
+      font-size: 0.85rem;
+    }
+  
+    button {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    #app {
+      grid-template-columns: 1fr;
+    }
+  }

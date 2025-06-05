@@ -2,7 +2,7 @@ export function renderData(data, type) {
     const contentArea = document.getElementById('app');
     contentArea.innerHTML = '';
   
-    data.slice(0, 6).forEach(item => {
+    data.slice(0, 10).forEach(item => {
       const card = document.createElement('div');
       card.classList.add('card');
   
@@ -41,7 +41,7 @@ export function renderData(data, type) {
           const p = document.createElement('p');
           p.textContent = `Birth Year: ${item.birth_year}`;
           card.appendChild(p);
-        }
+        } 
       }
   
       if (type === 'films') {
